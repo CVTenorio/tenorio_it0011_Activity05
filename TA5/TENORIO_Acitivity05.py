@@ -43,5 +43,34 @@ def main():
                 
         elif choice == 'E':
             try:
-                
-                
+                base = float(input("Enter base: "))
+                exponent = float(input("Enter exponent: "))
+                result = exponentiation(base, exponent)
+                print("Result:", result)
+            except: ValueError
+                print("Invalid input. Please enter numbers.")
+        elif choice == 'R':
+            try:
+                num1 = float(input("Enter numerator: ")) 
+                num2 = float(input("Enter denominator: "))       
+                result = remainder(num1,num2)
+                if result is not None:
+                    print("Result: ", result)
+            except ValueError:
+                print("invalid input. Please enter numebers.")
+        elif choice == 'F':
+            try:
+                start = int (input("Enter start number: "))
+                end = int(input("Enter end number: "))
+                result = summation(start,end)
+                if result is not None:
+                    print("Result:", result)
+            except ValueError:
+                print("Invalid input. Please enter integers.")
+        elif choice == 'Q':
+            print("Exiting program..")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option from the Menu.")
+
+        
