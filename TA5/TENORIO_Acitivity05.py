@@ -1,7 +1,7 @@
 #TENORIO CARL VINCENT IT0011 Actvitiy 05 v1.00
 
 def divide(numerator, denominator):
-    if denominatior == 0:
+    if denominator == 0:
         print("Error: Divide by 0 is not allowed.")
         return None
     return numerator / denominator
@@ -46,8 +46,9 @@ def main():
                 base = float(input("Enter base: "))
                 exponent = float(input("Enter exponent: "))
                 result = exponentiation(base, exponent)
+                
                 print("Result:", result)
-            except: ValueError
+            except ValueError:
                 print("Invalid input. Please enter numbers.")
         elif choice == 'R':
             try:
@@ -73,4 +74,5 @@ def main():
         else:
             print("Invalid choice. Please enter a valid option from the Menu.")
 
-        
+if __name__ == "__main__":
+    main()
